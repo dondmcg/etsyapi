@@ -1,0 +1,39 @@
+{
+  "name": "etsyapi",
+  "version": "1.0.0",
+  "description": "create a list of products",
+  "main": "lib/app-module.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "live-server",
+    "build-css": "node-sass --include-path scss scss/main.scss public/css/main.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dondmcg/etsyapi.git"
+  },
+  "keywords": [
+    "etsy",
+    "api",
+    "product",
+    "list"
+  ],
+  "author": "Don McGrath",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dondmcg/etsyapi/issues"
+  },
+  "homepage": "https://github.com/dondmcg/etsyapi#readme",
+  "dependencies": {
+    "angular": "^1.4.9",
+    "angular-route": "^1.4.9",
+    "bootstrap": "^3.3.6",
+    "qunit": "^0.9.0"
+  },
+  "devDependencies": {
+    "live-server": "^0.9.1",
+    "node-sass": "^3.4.2",
+    "nodemon": "^1.9.0"
+  }
+}
