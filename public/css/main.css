@@ -1,3 +1,27 @@
 body {
-  margin: 0;
-  background-color: #bada55; }
+  background-color: #eeeeee; }
+
+[class^='col-'] {
+  position: relative; }
+
+[class^='col-'] img {
+  width: 100%;
+  margin: 10px; }
+
+[class^='col-'] a.item-wrap {
+  display: block; }
+
+.item-title {
+  margin: 10px;
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%; }
+
+.main {
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px; }
