@@ -19,39 +19,50 @@
         <!--[if lt IE 8]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <div class="navbar navbar-inverse navbar-static-top" role="navigation"> 
-            <div class="navbar-header"> 
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> 
-                    <span class="sr-only">Toggle navigation</span> 
-                    <span class="icon-bar"></span> 
-                    <span class="icon-bar"></span> 
-                    <span class="icon-bar"></span> 
-                </button> 
-                <a class="navbar-brand" rel="home" href="/" title="Etsy Results">Test Etsy List Page</a> 
-            </div>  
-            <div class="collapse navbar-collapse navbar-collapse"> 
-                <ul class="nav navbar-nav"> 
-                    <li><a href="dogs">Dogs</a></li> 
-                    <li><a href="women">Women</a></li> 
-                    <li><a href="men">Men</a></li> 
-                    <li><a href="jewelery">Jewelery</a></li> 
-                    <li><a href="bookmarks">Bookmarks</a></li> 
-                    <li><a href="all">All</a></li> 
-                </ul> 
+        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation"> 
+            <div class="container-fluid">
+                <div class="navbar-header"> 
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> 
+                        <span class="sr-only">Toggle navigation</span> 
+                        <span class="icon-bar"></span> 
+                        <span class="icon-bar"></span> 
+                        <span class="icon-bar"></span> 
+                    </button> 
+                    <a class="navbar-brand" rel="home" href="/" title="Etsy Results"><h2>Etsy List Page</h2></a> 
+                </div>  
+                <div class="collapse navbar-collapse navbar-collapse"> 
+                    <ul class="nav navbar-nav"> 
+                        <li><a href="dogs">Dogs</a></li> 
+                        <li><a href="women">Women</a></li> 
+                        <li><a href="men">Men</a></li> 
+                        <li><a href="jewelery">Jewelery</a></li> 
+                        <li><a href="all">All</a></li> 
+                    </ul> 
+                </div>
             </div>
         </div>
         <div class="main">
-            <div class="input-group">
-                <input id="search" class="form-control" type="text" name="search" placeholder="Search" />
-                <div class="input-group-btn">
-                    <button id="search-btn" type="button" class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
-                    <button id="bookmark-btn" type="button" class="btn btn-default"><i class="glyphicon glyphicon-star"></i></button>
+            <div class="search-row">
+                <div id="search-wrap" class="input-group">
+                    <input id="search" class="form-control" type="text" name="search" placeholder="Search" />
+                    <div class="input-group-btn">
+                        <button id="search-btn" type="button" class="btn btn-default" alt="Submit Search" title="Submit Search"><i class="glyphicon glyphicon-search"></i></button>
+                        <button id="bookmark-btn" type="button" class="btn btn-default" alt="Add to Bookmarks" title="Add Search to Bookmarks"><i class="glyphicon glyphicon-star  text-primary"></i></button>
+                    </div>
+                </div>
+                <div id="pag-wrap">
+                    <div id="total_pages" class="pull-left"></div>
+                    <ul id="paginator" class="pagination pull-right">
+                    </ul>
                 </div>
             </div>
             <div id="etsyData">
-                <div id="etsyImages"></div>
+                <div id="etsyImages" class="list-group"></div>
+                <div id="list_loader_overlay"></div>
+                <i id="list_loader" class="glyphicon glyphicon-refresh icon-spin"></i>
             </div>
         </div>
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/js/bootstrap.js">
         <script src="public/js/vendor/modernizr-2.8.3.min.js"></script>
         <script src="public/js/main.js"></script>
     </body>
