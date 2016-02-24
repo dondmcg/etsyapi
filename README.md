@@ -25,4 +25,4 @@ TBD:
 
 Nice To Have:
 
-1. filters in header nav
+1. change filters in header nav to dropdown lists
