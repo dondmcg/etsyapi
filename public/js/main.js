@@ -59,6 +59,7 @@ var endPoint = 'https://openapi.etsy.com/v2/listings/active.js?callback=getData&
     }
 
     function getData(data) {
+        console.log(data);
         // set vars
         var imageDiv = document.getElementById("etsyImages"), html = '';
         //console.log(data);
@@ -255,6 +256,7 @@ var endPoint = 'https://openapi.etsy.com/v2/listings/active.js?callback=getData&
         filterBarLinks[x].onclick = function (e) {
             e.preventDefault();
             var searchTerm = this.innerHTML;
+            searchTerm = (searchTerm === 'All')? '' : searchTerm;
             filterSet = (searchTerm) ? '&keywords=' + searchTerm : '';
             parent.location.hash = '#keywords=' + searchTerm;
             document.getElementById('search').value= searchTerm;
