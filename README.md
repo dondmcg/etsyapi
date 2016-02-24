@@ -7,7 +7,7 @@ Currently the pagination is not finished, you can only go forward in page sets. 
 
 I have also not had time to set up the js tests.
 
-TBD
+TBD:
 
 1. refactor js
 
@@ -16,3 +16,6 @@ TBD
 3. finish pagination
 
 4. write final tests
+
+Nice To Have:
+1. filters in header nav
