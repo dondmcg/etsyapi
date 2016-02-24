@@ -30,4 +30,4 @@ TBD:
 
 Nice To Have:
 
-1. change filters in header nav to dropdown lists
+1. change filters in header nav to dropdown lists (possibly add them to search bar or left nav as optional search params)
