@@ -7,6 +7,8 @@ Currently the pagination is not finished, you can only go forward in page sets. 
 
 I have also not had time to set up the js tests.
 
+ONLY FUNCTIONALLY TESTED ON CHROME 
+
 TBD:
 
 1. refactor js
