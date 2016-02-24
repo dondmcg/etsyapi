@@ -23,6 +23,8 @@ TBD:
 
 4. write final tests
 
+5. final cross-browser testing 
+
 Nice To Have:
 
 1. change filters in header nav to dropdown lists
