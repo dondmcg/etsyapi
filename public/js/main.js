@@ -218,7 +218,8 @@ var endPoint = 'https://openapi.etsy.com/v2/listings/active.js?callback=getData&
     // event listeners
     var search = document.getElementById('search'),
     searchBtn = document.getElementById('search-btn'),
-    bookmarkBtn = document.getElementById('bookmark-btn');
+    bookmarkBtn = document.getElementById('bookmark-btn'),
+    filterBarLinks = document.getElementById('header_nav').getElementsByTagName('a');
 
     search.onkeyup = function () {
         delay(function () {
@@ -230,7 +231,7 @@ var endPoint = 'https://openapi.etsy.com/v2/listings/active.js?callback=getData&
         }, 1000);
     };
 
-    searchBtn.onclick = function (e) {
+    searchBtn.onclick = function () {
         var searchTerm = document.getElementById('search').value;
         filterSet = (searchTerm) ? '&keywords=' + searchTerm : '';
         parent.location.hash = '#keywords=' + searchTerm;
@@ -248,3 +249,16 @@ var endPoint = 'https://openapi.etsy.com/v2/listings/active.js?callback=getData&
             alert('Press ' + (navigator.userAgent.toLowerCase().indexOf('mac') != -1 ? 'Command/Cmd' : 'CTRL') + ' + D to bookmark this page.');
         }
     };
+
+    // add listeners to nav links
+    for (var x = 0; x < filterBarLinks.length; x++) {
+        filterBarLinks[x].onclick = function (e) {
+            e.preventDefault();
+            var searchTerm = this.innerHTML;
+            filterSet = (searchTerm) ? '&keywords=' + searchTerm : '';
+            parent.location.hash = '#keywords=' + searchTerm;
+            document.getElementById('search').value= searchTerm;
+            getScript(endPoint + resultSet + filterSet);
+            filterSet = '';
+        };
+    }
