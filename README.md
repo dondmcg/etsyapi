@@ -8,7 +8,11 @@ Currently the pagination is not finished, you can only go forward in page sets. 
 I have also not had time to set up the js tests.
 
 TBD
+
 1. refactor js
+
 2. write some tests
+
 3. finish pagination
+
 4. write final tests
