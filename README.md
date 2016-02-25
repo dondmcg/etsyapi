@@ -18,15 +18,9 @@ ONLY FUNCTIONALLY TESTED ON CHROME
 
 TBD:
 
-1. refactor js
+1. write final tests
 
-2. write some tests
-
-3. finish pagination
-
-4. write final tests
-
-5. final cross-browser testing 
+2. final cross-browser testing 
 
 Nice To Have:
 
