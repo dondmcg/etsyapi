@@ -6,7 +6,7 @@ body {
 [class^='col-'] img { width: 100%; margin: 10px;}
 
 [class^='col-'] a.item-wrap { display: block;}*/
-.caption {
+.no-touch .caption {
   padding: 10px;
   position: absolute;
   bottom: 0;

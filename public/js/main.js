@@ -74,16 +74,16 @@ var EtsyAPIModule = (function () {
             html = "<div class='row'>";
             for (i = 0; i < data.results.length; i++) {
                 if ((i % 4) === 0 && i !== 0) html = html + "</div><div class='row'>";
-                html = html + "<div class='item col-lg-3 col-xs-3 grid-group-item'> \
+                html = html + "<div class='item col-md-3 grid-group-item'> \
                                 <div class='thumbnail'> \
                                     <img src='" + data.results[i].Images[0].url_170x135 + "' class='group list-group-image' alt='product image'/> \
                                     <div class='caption'> \
                                             <p class='group inner list-group-item-text'>" + data.results[i].title + "</p> \
                                             <div class='row'> \
-                                                <div class='col-xs-12 col-md-6'> \
+                                                <div class='col-sm-6'> \
                                                     <p class='lead'>$" + data.results[i].price + "</p> \
                                                 </div> \
-                                                <div class='col-xs-12 col-md-6'><a class='btn btn-success' href='" + data.results[i].url + "'>Details</a></div> \
+                                                <div class='col-sm-6'><a class='btn btn-success' href='" + data.results[i].url + "'>Details</a></div> \
                                             </div> \
                                     </div> \
                                 </div> \
