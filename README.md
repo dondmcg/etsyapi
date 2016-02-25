@@ -10,15 +10,13 @@ run npm start
 
 Hosted version http://www.mcgrathdesigns.com/etsylist
 
-I have not had time to set up the js tests.
+I have added a couple of sample QUnit tests.
 
-ONLY FUNCTIONALLY TESTED ON CHROME 
+Functionally tested on IE Chrome and safari ipad and iphone
 
-TBD:
+To see sample tests go to:
 
-1. write final tests
-
-2. final cross-browser testing 
+http://www.mcgrathdesigns.com/etsylist/test.html
 
 Nice To Have:
 
