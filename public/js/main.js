@@ -1,7 +1,7 @@
 var EtsyAPIModule = (function () {
 
     // endpoint
-    // https://openapi.etsy.com/v2/users/testusername.js?callback=EtsyAPIList.getData&api_key=pwsh318hwrljh22zabbl3rtp
+    // https://openapi.etsy.com/v2/listings/active.js?callback=EtsyAPIModule.getData&&includes=Images:1&api_key=pwsh318hwrljh22zabbl3rtp
     // key:
     // pwsh318hwrljh22zabbl3rtp
 
@@ -176,11 +176,11 @@ var EtsyAPIModule = (function () {
             }
         }
 
-        var newDataSet = (pre_nxt === 'prev')? Number(dataset) - 1 : Number(dataset) + 1;
-        element.setAttribute("data-set", newDataSet);
-        var startEnd = (pre_nxt === 'prev')? 1 : numSet;
+        var newDataSet = (pre_nxt === 'prev')? Number(dataset) - 1 : Number(dataset) + 1,
+            startEnd = (pre_nxt === 'prev')? 1 : numSet;
         if (newDataSet === startEnd) element.className = 'visibility-none';
         document.getElementById('prev_set').setAttribute("data-set", newDataSet);
+        document.getElementById('next_set').setAttribute("data-set", newDataSet);
         offset = startPageBtn.getAttribute('data-offset');
         resultSet = '&limit=' + limit + '&offset=' + offset;
         getScript(endPoint + resultSet + filterSet);
@@ -283,7 +283,9 @@ var EtsyAPIModule = (function () {
         //publicMethods
         getHashParams: getHashParams,
         delay: delay,
-        getData: getData
+        getData: getData,
+        // make public for testing
+        getScript: getScript
 
     };
 
