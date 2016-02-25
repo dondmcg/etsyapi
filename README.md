@@ -10,9 +10,7 @@ run npm start
 
 Hosted version http://www.mcgrathdesigns.com/etsylist
 
-Currently the pagination is not finished, you can only go forward in page sets.  And the javascript is not scoped out correctly.  I need to either objectify or modularize the current code.  But it is in vanilla javascript.
-
-I have also not had time to set up the js tests.
+I have not had time to set up the js tests.
 
 ONLY FUNCTIONALLY TESTED ON CHROME 
 
