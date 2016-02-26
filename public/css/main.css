@@ -6,16 +6,16 @@ body {
 [class^='col-'] img { width: 100%; margin: 10px;}
 
 [class^='col-'] a.item-wrap { display: block;}*/
-.no-touch .caption {
+/*.no-touch .caption {
   padding: 10px;
-  position: absolute;
+  position:absolute;
   bottom: 0;
   left: 0;
   color: #ffffff;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color:rgba(0,0,0,0.5);
   width: 100%;
-  opacity: 0; }
-
+  opacity: 0;
+}*/
 .caption:hover {
   -webkit-transition: opacity .5s ease-in;
   -moz-transition: opacity .5s ease-in;
@@ -138,3 +138,8 @@ body {
 @media (max-width: 460px) {
   #paginator a {
     padding: 5px 10px; } }
+
+@media (max-width: 768px) {
+  .col-sm-6 {
+    width: 25%;
+    float: left; } }
