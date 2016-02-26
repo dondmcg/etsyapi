@@ -43,12 +43,14 @@ var EtsyAPIModule = (function () {
     })();
 
     var getScript = function(source, callback) {
+        var apiScript = document.getElementById("apiScript");
+        if( apiScript ) apiScript.parentNode.removeChild( apiScript );
         document.getElementById("list_loader").className = "glyphicon glyphicon-refresh icon-spin";
         document.getElementById("list_loader_overlay").className = "";
         var script = document.createElement('script');
-        var prior = document.getElementsByTagName('script')[0];
         script.async = 1;
-        prior.parentNode.insertBefore(script, prior);
+        script.id = 'apiScript';
+        document.head.appendChild(script);
 
         script.onload = script.onreadystatechange = function (_, isAbort) {
             if (isAbort || !script.readyState || /loaded|complete/.test(script.readyState)) {
