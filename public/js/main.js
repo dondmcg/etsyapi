@@ -9,7 +9,7 @@ var EtsyAPIModule = (function () {
     var search = document.getElementById('search'),
         searchBtn = document.getElementById('search-btn'),
         bookmarkBtn = document.getElementById('bookmark-btn'),
-        filterBarLinks = document.getElementById('header_nav').getElementsByTagName('a'),
+        filterBarLinks = document.getElementById('navbar').getElementsByClassName('nav')[0].getElementsByTagName('a'),
         endPoint = 'https://openapi.etsy.com/v2/listings/active.js?callback=EtsyAPIModule.getData&&includes=Images:1&api_key=pwsh318hwrljh22zabbl3rtp',
         offset = 0,
         limit = 24,
